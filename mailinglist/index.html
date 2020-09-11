@@ -107,15 +107,21 @@
     
     #mc_embed_signup .button {
       margin: 0;
-      background-color: limegreen;
-      line-height: 3rem;
+      /*background-color: limegreen;*/
+      background-color: #2ecc71;
+      line-height: 3;
+      font-size: 1.2rem;
       font-weight: bold;
       height: auto;
       margin-left: auto;
     }
     
+    #mc_embed_signup .button:hover {
+      background-color: #27ae60;
+    }
+    
     #mc_embed_signup form {
-      padding: 10px;
+      padding: 16px;
       background: #fff;
       border: 1px solid #ddd;
       border-radius: 0.8rem;
@@ -127,6 +133,10 @@
       min-height: 3rem;
       padding: 0.75rem 0.75rem;
       box-sizing: border-box;
+    }
+    
+    #mc_embed_signup .mc-field-group label {
+      font-size: 1rem; 
     }
 
     /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
