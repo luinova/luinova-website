@@ -49,6 +49,44 @@
   <!-- CSS -->
   <!-- <link rel="stylesheet" href="dist/assets/css/luinova.css"> -->
 
+  <style>
+    .image-grid {
+      display: flex;
+      justify-content: space-between;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+    .image-grid__image {
+      -ms-flex: 25%; /* IE10 */
+      flex: 25%;
+      max-width: 24%;
+      padding: 0 2px;
+      margin-top: 8px;
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+      .image-grid__image {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 49%;
+      }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .image-grid__image {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+        padding: 0;
+      }
+    }
+  </style>
+
   <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -62,11 +100,12 @@
 </head>
 
 <body class="main-page">
-  
-  <img src="California_Poppy-wallpaper@2x.png" alt="California Poppy"/>
-  <img src="California_Poppy-wallpaper_v2@2x.png" alt="California Poppy"/>
-  <img src="Calla_Lily-wallpaper@2x.png" alt="California Poppy"/>
-  <img src="Calla_Lily-wallpaper_v2@2x.png" alt="California Poppy"/>
+  <div class="image-grid">
+    <img src="California_Poppy-wallpaper@2x.png" alt="California Poppy" class="image-grid__image" />
+    <img src="California_Poppy-wallpaper_v2@2x.png" alt="California Poppy" class="image-grid__image" />
+    <img src="Calla_Lily-wallpaper@2x.png" alt="Calla Lily" class="image-grid__image" />
+    <img src="Calla_Lily-wallpaper_v2@2x.png" alt="Calla Lily" class="image-grid__image" />
+  </div>
   
   <script type="text/javascript">
     (function () {
